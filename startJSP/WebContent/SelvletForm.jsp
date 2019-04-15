@@ -15,7 +15,7 @@ PW : <input type="password" name="pw" size=10><br>
 <input type="checkbox" name="hobby" value="cook">요리
 <input type="checkbox" name="hobby" value="run">조깅
 <input type="checkbox" name="hobby" value="swim">수영
-<input type="checkbox" name="hob by" value="sleep">낮잠
+<input type="checkbox" name="hobby" value="sleep">낮잠
 <br>
 과목 : <input type="radio" name="major" value="kor">국어  
 	<input type="radio" name="major" value="eng">영어
