@@ -20,6 +20,8 @@ Long time=date.getTime();
 
 String filename=time+".txt";
 PrintWriter writer=null;
+String result;
+
 try{
 	String filePath = application.getRealPath("/WEB-INF/bbs/"+filename);
 	writer = new PrintWriter(filePath);
@@ -27,13 +29,17 @@ try{
 	writer.printf("글쓴이 : %s %n",name);
 	writer.printf("%s",content);
 	
-	out.println("<font color='red'>게시물이 저장되없습니다</font>");
+	//out.println("<font color='red'>게시물이 저장되었습니다</font>");
 	writer.flush();
+	result="ok";
+	
 }catch(Exception e){
 	out.print("오류 발생");
+	result="fail";
 }finally{
 	
 }
+response.sendRedirect("boardResult.jsp?result="+result);
 %>
 </body>
 </html>

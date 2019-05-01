@@ -9,16 +9,17 @@
 </head>
 <body>
 <%
-String dirPath=application.getRealPath("/WEB-INF/movie");
-
-File dir = new File(dirPath);
-String fileNames[]=dir.list();
+	String dirPath=application.getRealPath("/WEB-INF/movie");
+	//out.println(dirpath);
+	
+	File dir = new File(dirPath);
+	String fileNames[]=dir.list();
 %>
 <h4>영화 목록</h4>
 <%
-for(String filename : fileNames){%>
-	<a href="movieReader.jsp?NAME=<%=filename %>"><%=filename %></a><br>
-<%}
+	for(String filename : fileNames){%>
+		<a href="movieReader.jsp?NAME=<%=filename%>"><%=filename%></a><br>
+	<%}
 %>
 </body>
 </html>
